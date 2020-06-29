@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.util.SparseIntArray;
 import android.view.View;

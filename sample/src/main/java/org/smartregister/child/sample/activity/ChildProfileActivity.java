@@ -1,7 +1,7 @@
 package org.smartregister.child.sample.activity;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 
 import org.smartregister.child.util.Utils;
 import org.smartregister.view.activity.BaseProfileActivity;

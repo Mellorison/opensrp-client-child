@@ -1,6 +1,6 @@
 package org.smartregister.child.contract;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.apache.commons.lang3.tuple.Triple;
 import org.json.JSONException;

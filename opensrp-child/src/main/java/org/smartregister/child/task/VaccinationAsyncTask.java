@@ -2,8 +2,8 @@ package org.smartregister.child.task;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.VisibleForTesting;
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;

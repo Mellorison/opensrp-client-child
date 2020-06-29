@@ -2,8 +2,8 @@ package org.smartregister.child.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.bottomnavigation.LabelVisibilityMode;
-import android.support.v4.app.Fragment;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.View;
 

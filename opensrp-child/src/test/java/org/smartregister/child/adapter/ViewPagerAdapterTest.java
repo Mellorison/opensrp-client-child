@@ -1,7 +1,7 @@
 package org.smartregister.child.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.core.app.Fragment;
+import androidx.core.app.FragmentManager;
 
 import org.junit.Before;
 import org.junit.Test;

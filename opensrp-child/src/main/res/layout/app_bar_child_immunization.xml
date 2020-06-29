@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-        <include layout="@layout/data_capture_strategy_banner" />
+    <include layout="@layout/data_capture_strategy_banner" />
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"

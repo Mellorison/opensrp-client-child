@@ -3,10 +3,11 @@ package org.smartregister.child.fragment;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.VisibleForTesting;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatCheckBox;
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatCheckBox;
 import android.text.InputType;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -282,12 +283,12 @@ public class ChildFormFragment extends JsonWizardFormFragment {
         snackbarView.setMinimumHeight(Float.valueOf(textSize).intValue());
         snackbarView.setBackgroundResource(R.color.accent);
 
-        final Button actionView = snackbarView.findViewById(android.support.design.R.id.snackbar_action);
+        final Button actionView = snackbarView.findViewById(R.id.snackbar_action);
         actionView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         actionView.setGravity(Gravity.CENTER);
         actionView.setTextColor(getResources().getColor(R.color.white));
 
-        TextView textView = snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+        TextView textView = snackbarView.findViewById(R.id.snackbar_text);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         textView.setGravity(Gravity.CENTER);
         textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_error, 0, 0, 0);
@@ -335,12 +336,12 @@ public class ChildFormFragment extends JsonWizardFormFragment {
         snackbarView.setMinimumHeight(Float.valueOf(textSize).intValue());
         snackbarView.setBackgroundResource(R.color.accent);
 
-        final Button actionView = snackbarView.findViewById(android.support.design.R.id.snackbar_action);
+        final Button actionView = snackbarView.findViewById(R.id.snackbar_action);
         actionView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         actionView.setGravity(Gravity.CENTER);
         actionView.setTextColor(getResources().getColor(R.color.white));
 
-        TextView textView = snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+        TextView textView = snackbarView.findViewById(R.id.snackbar_text);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         textView.setGravity(Gravity.CENTER);
         textView.setOnClickListener(new View.OnClickListener() {

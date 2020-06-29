@@ -1,10 +1,6 @@
 package org.smartregister.child.fragment;
 
 import android.app.Activity;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.view.menu.MenuBuilder;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -13,6 +9,11 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.fragment.app.FragmentActivity;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.vijay.jsonwizard.activities.JsonFormActivity;
 import com.vijay.jsonwizard.domain.Form;
@@ -194,9 +195,9 @@ public class ChildFormFragmentTest extends BaseUnitTest {
         Activity activity = Robolectric.setupActivity(FragmentActivity.class);
         LinearLayout linearLayout = new LinearLayout(RuntimeEnvironment.application);
         Button actionView = new Button(RuntimeEnvironment.application);
-        actionView.setId(android.support.design.R.id.snackbar_action);
+        actionView.setId(com.google.android.material.R.id.snackbar_action);
         TextView textView = new TextView(RuntimeEnvironment.application);
-        textView.setId(android.support.design.R.id.snackbar_text);
+        textView.setId(com.google.android.material.R.id.snackbar_text);
         linearLayout.addView(actionView);
         linearLayout.addView(textView);
 
@@ -274,9 +275,9 @@ public class ChildFormFragmentTest extends BaseUnitTest {
         LinearLayout linearLayout = new LinearLayout(RuntimeEnvironment.application);
         Button actionView = new Button(RuntimeEnvironment.application);
         Button actionViewSpy = Mockito.spy(actionView);
-        actionViewSpy.setId(android.support.design.R.id.snackbar_action);
+        actionViewSpy.setId(com.google.android.material.R.id.snackbar_action);
         TextView textView = new TextView(RuntimeEnvironment.application);
-        textView.setId(android.support.design.R.id.snackbar_text);
+        textView.setId(com.google.android.material.R.id.snackbar_text);
         linearLayout.addView(actionViewSpy);
         linearLayout.addView(textView);
 

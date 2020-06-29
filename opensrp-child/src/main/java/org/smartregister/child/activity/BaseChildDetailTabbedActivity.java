@@ -13,13 +13,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.StrictMode;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -31,6 +24,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.domain.Form;
 
@@ -449,7 +450,7 @@ public abstract class BaseChildDetailTabbedActivity extends BaseChildActivity
             Field field = TabLayout.class.getDeclaredField("mTabStrip");
             field.setAccessible(true);
             Object object = field.get(tabLayout);
-            Class<?> c = Class.forName("android.support.design.widget.TabLayout$SlidingTabStrip");
+            Class<?> c = Class.forName("com.google.android.material.snackbar.widget.TabLayout$SlidingTabStrip");
             Method method = c.getDeclaredMethod("setSelectedIndicatorColor", int.class);
             method.setAccessible(true);
             method.invoke(object, getResources().getColor(normalShade)); //now its ok
@@ -579,6 +580,7 @@ public abstract class BaseChildDetailTabbedActivity extends BaseChildActivity
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         AllSharedPreferences allSharedPreferences = getOpenSRPContext().allSharedPreferences();
         if (requestCode == REQUEST_CODE_GET_JSON && resultCode == RESULT_OK) {
             try {

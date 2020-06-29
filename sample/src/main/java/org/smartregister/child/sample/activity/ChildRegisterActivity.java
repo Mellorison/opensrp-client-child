@@ -1,6 +1,6 @@
 package org.smartregister.child.sample.activity;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.MenuItem;
 
 import org.smartregister.child.activity.BaseChildRegisterActivity;

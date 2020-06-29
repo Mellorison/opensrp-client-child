@@ -1,9 +1,9 @@
 package org.smartregister.child.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.RecyclerView;
+import androidx.core.app.FragmentActivity;
+import androidx.appcompat.widget.DefaultItemAnimator;
+import androidx.appcompat.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

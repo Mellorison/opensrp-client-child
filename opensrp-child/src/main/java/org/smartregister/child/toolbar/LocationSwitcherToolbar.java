@@ -1,10 +1,12 @@
 package org.smartregister.child.toolbar;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import org.smartregister.AllConstants;
 import org.smartregister.child.R;
@@ -16,7 +18,7 @@ import org.smartregister.view.customcontrols.CustomFontTextView;
 
 /**
  * To use this toolbar in your activity, include the following line as the first child in your activity's main {@link
- * android.support.design.widget.CoordinatorLayout}
+ * CoordinatorLayout}
  * <p/>
  * <include layout="@layout/toolbar_location_switcher" />
  * <p/>

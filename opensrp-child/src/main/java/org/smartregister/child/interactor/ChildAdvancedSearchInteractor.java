@@ -1,6 +1,6 @@
 package org.smartregister.child.interactor;
 
-import android.support.annotation.VisibleForTesting;
+import androidx.annotation.VisibleForTesting;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -171,7 +171,7 @@ public class ChildAdvancedSearchInteractor implements ChildAdvancedSearchContrac
     @NotNull
     private String getChildBirthDateParameter(Map<String, String> searchParameters, String name) {
         String birthDate = "";
-        String birthDatesString = searchParameters.remove(Constants.KEY.BIRTH_DATE) ;
+        String birthDatesString = searchParameters.remove(Constants.KEY.BIRTH_DATE);
 
         String[] birthDates = birthDatesString != null ? birthDatesString.split(":") : new String[]{};
         if (StringUtils.isNoneBlank(birthDates) && birthDates.length == 2 && StringUtils.isNoneBlank(name)) {
