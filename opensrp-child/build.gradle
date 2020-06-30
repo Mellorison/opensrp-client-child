@@ -52,6 +52,13 @@ android {
         abortOnError false
     }
 
+    compileOptions {
+
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     // avoid errors with message 'Duplicate files copied in APK ...'
     packagingOptions {
         exclude 'LICENSE.txt'
