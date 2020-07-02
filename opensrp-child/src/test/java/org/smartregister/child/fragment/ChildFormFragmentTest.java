@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -24,8 +25,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
@@ -191,28 +192,34 @@ public class ChildFormFragmentTest extends BaseUnitTest {
 
 
     @Test
-    @Ignore //Snackbar is now final on AndroidX to do refactor test
     public void testShowFinalActionSnackBarShouldShowSnackBar() throws Exception {
+
         formFragment = PowerMockito.spy(formFragment);
+
         Activity activity = Robolectric.setupActivity(FragmentActivity.class);
-        LinearLayout linearLayout = new LinearLayout(RuntimeEnvironment.application);
-        Button actionView = new Button(RuntimeEnvironment.application);
+
+        CoordinatorLayout parentLayout = new CoordinatorLayout(activity);
+        LinearLayout linearLayout = new LinearLayout(activity);
+
+        Button actionView = new Button(activity);
         actionView.setId(com.google.android.material.R.id.snackbar_action);
-        TextView textView = new TextView(RuntimeEnvironment.application);
-        textView.setId(com.google.android.material.R.id.snackbar_text);
         linearLayout.addView(actionView);
+
+        TextView textView = new TextView(activity);
+        textView.setId(com.google.android.material.R.id.snackbar_text);
         linearLayout.addView(textView);
+
+        parentLayout.addView(linearLayout);
 
         Mockito.doReturn(activity).when(formFragment).getActivity();
         Mockito.doReturn(activity.getResources()).when(formFragment).getResources();
-
-        Snackbar snackbar = Mockito.mock(Snackbar.class);
-        Mockito.doReturn(linearLayout).when(snackbar).getView();
+        Mockito.doReturn(linearLayout).when(formFragment).getSnackBarView(ArgumentMatchers.any(Snackbar.class));
+        Snackbar snackbar = Snackbar.make(parentLayout, R.string.undo_lookup, Snackbar.LENGTH_INDEFINITE);
 
         ReflectionHelpers.setStaticField(ChildFormFragment.class, "showResultsDuration", 0);
         Whitebox.invokeMethod(formFragment, "showFinalActionSnackBar", snackbar);
-        Mockito.verify(snackbar, Mockito.times(1)).show();
-        Mockito.verify(snackbar, Mockito.times(1)).dismiss();
+        Mockito.verify(formFragment, Mockito.times(1)).showSnackBar(ArgumentMatchers.any(Snackbar.class));
+        Mockito.verify(formFragment, Mockito.times(1)).dismissSnackBar(ArgumentMatchers.any(Snackbar.class));
 
     }
 
