@@ -6,7 +6,7 @@
 
     <include layout="@layout/data_capture_strategy_banner" />
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/register_nav_bar_container"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -15,12 +15,12 @@
         android:focusableInTouchMode="true">
 
 
-        <android.support.design.widget.AppBarLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
 
-            <android.support.v7.widget.Toolbar
+            <android.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
@@ -30,9 +30,9 @@
 
                 <include layout="@layout/tool_bar" />
 
-            </android.support.v7.widget.Toolbar>
+            </android.widget.Toolbar>
 
-        </android.support.design.widget.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

@@ -165,6 +165,7 @@ dependencies {
     implementation 'com.google.guava:guava:29.0-android'
     implementation 'id.zelory:compressor:2.1.0'
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0"
 
     testImplementation 'junit:junit:4.13'
     def robolectricVersion = '4.1'
