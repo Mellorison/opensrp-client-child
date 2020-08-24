@@ -1,7 +1,7 @@
 package org.smartregister.child.adapter;
 
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +19,10 @@ public class ViewPagerAdapterTest extends BaseUnitTest {
     @Mock
     private FragmentManager fragmentManager;
 
+    @Mock
     private Fragment fragment1;
+
+    @Mock
     private Fragment fragment2;
 
     @Before
@@ -49,6 +52,6 @@ public class ViewPagerAdapterTest extends BaseUnitTest {
 
     @Test
     public void testGetPageTitleReturnsFragmentTitleAtPosition() {
-        assertEquals((CharSequence) "Title1", adapter.getPageTitle(0));
+        assertEquals("Title1", adapter.getPageTitle(0));
     }
 }
