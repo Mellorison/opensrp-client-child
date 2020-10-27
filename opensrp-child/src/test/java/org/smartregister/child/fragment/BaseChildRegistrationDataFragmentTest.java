@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vijay.jsonwizard.constants.JsonFormConstants;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;

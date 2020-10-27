@@ -1,7 +1,8 @@
 package org.smartregister.child.service.intent;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
 import org.smartregister.child.util.Utils;

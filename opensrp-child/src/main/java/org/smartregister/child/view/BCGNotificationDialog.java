@@ -3,7 +3,8 @@ package org.smartregister.child.view;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.util.SparseIntArray;

@@ -744,7 +744,7 @@ public class ChildJsonFormUtils extends JsonFormUtils {
         String childLocationId = getChildLocationId(event.getLocationId(), allSharedPreferences);
         event.setChildLocationId(childLocationId);
 
-        if (StringUtils.isNotBlank(childLocationId) && childLocationId.startsWith(AllConstants.ADVANCED_DATA_CAPTURE_STRATEGY_PREFIX)) {
+        if (StringUtils.isNotBlank(childLocationId) && LocationHelper.getInstance().getAdvancedDataCaptureStrategies().contains(childLocationId)) {
             event.addDetails(AllConstants.DATA_STRATEGY, childLocationId.substring(childLocationId.indexOf('_') + 1));
         }
 
